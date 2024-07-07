@@ -1,0 +1,55 @@
+there is two version of toaster one is for laravel controller or if we want to show toaster msg from back end and other one is toaster js which is for front end
+
+Laravel package: https://github.com/yoeunes/toastr
+js package: https://github.com/CodeSeven/toastr
+
+
+
+first we will work with front end which is  js package: https://github.com/CodeSeven/toastr
+
+download it unzip it and copy paste the toaster.min.css and toaster.min.js file in public and include it in desired master page
+
+above body inside head you can change the location       <link rel="stylesheet" type="text/css" href="{{ asset('toastr.min.css') }}">
+
+inside at the end of the body inside head you can change the location    
+
+<link rel="stylesheet" type="text/css" href="{{ asset('toastr.min.css') }}">
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="{{ asset('toastr.min.js') }}"></script>
+
+
+
+ <script>
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": true,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn", // Ensure this is a valid method
+            "hideMethod": "fadeOut" // Ensure this is a valid method
+        };
+
+       // Display an info toast with no title
+@if( $errors->any())
+
+@foreach($errors->all() as $error)
+toastr.error("{{ $error }}")
+@endforeach
+
+@endif
+    </script>
+
