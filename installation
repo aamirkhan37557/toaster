@@ -55,3 +55,10 @@ copy and paste it footer section
           });
       });
   </script>
+
+
+
+now give this id to the button on which you want to trgeer confrimations
+
+ <button id="delete-button" data-url="{{ route('your.route') }}">Delete Item</button>
+
