@@ -1,5 +1,9 @@
 confirmation before delete we will do through sweet alert 
 
+first include crsf in header
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
+
 copy and paste the cdn link in header section 
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
@@ -57,8 +61,7 @@ copy and paste it footer section
   </script>
 
 
-
-now give this id to the button on which you want to trgeer confrimations
+now give this id and data-url to the button on which you want to trgeer confrimations
 
  <button id="delete-button" data-url="{{ route('your.route') }}">Delete Item</button>
 
