@@ -8,7 +8,7 @@ copy and paste the cdn link in header section
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
 
-copy and paste it footer section
+copy and paste it footer section DURING FIRING SWAL ALSO CHECK ITS METHOD EITHER U R GET POST OR DELETE
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <script>
       document.getElementById('delete-button').addEventListener('click', function(e) {
